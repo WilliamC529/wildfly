@@ -9,7 +9,7 @@ jobs:
       - name: Set up JDK 8
         uses: actions/setup-java@v3
         with:
-          java-version: '8'
+          java-version: '11'
           distribution: 'temurin'
       - name: Test
         run: 
@@ -22,8 +22,8 @@ jobs:
       - name: Set up JDK 8
         uses: actions/setup-java@v3
         with:
-          java-version: '8'
+          java-version: '11'
           distribution: 'temurin'
       - name: Test
         run: 
-          mvn -pl ee-dist -am edu.illinois:nondex-maven-plugin:1.1.2:nondex -Dtest=org.wildfly.dist.subsystem.xml.StandardConfigsXMLValidationUnitTestCase.testHost
+          mvn -pl ee-dist -am edu.illinois:nondex-maven-plugin:2.1.1:nondex -Dtest=org.wildfly.dist.subsystem.xml.StandardConfigsXMLValidationUnitTestCase.testHost
