@@ -13,7 +13,7 @@ jobs:
           distribution: 'temurin'
       - name: Test
         run: 
-          mvn -pl ee-dist -am test -Dtest=org.wildfly.dist.subsystem.xml.StandardConfigsXMLValidationUnitTestCase.testHost
+          mvn -pl ee-dist -am test -Dtest=org.wildfly.dist.subsystem.xml.StandardConfigsXMLValidationUnitTestCase.testHost -DfailIfNoTests=false
         
   Test_With_Nondex_Shuffling:
     runs-on: ubuntu-latest
@@ -26,4 +26,4 @@ jobs:
           distribution: 'temurin'
       - name: Test
         run: 
-          mvn -pl ee-dist -am edu.illinois:nondex-maven-plugin:2.1.1:nondex -Dtest=org.wildfly.dist.subsystem.xml.StandardConfigsXMLValidationUnitTestCase.testHost
+          mvn -pl ee-dist -am edu.illinois:nondex-maven-plugin:2.1.1:nondex -Dtest=org.wildfly.dist.subsystem.xml.StandardConfigsXMLValidationUnitTestCase.testHost -DfailIfNoTests=false
